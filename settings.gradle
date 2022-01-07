@@ -1,0 +1,3 @@
+rootProject.name = 'ET_Tripoli'
+include 'et_tripoliCore'
+
