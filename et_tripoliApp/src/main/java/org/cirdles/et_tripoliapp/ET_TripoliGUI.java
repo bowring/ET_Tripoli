@@ -28,6 +28,8 @@ import javafx.stage.Window;
 import javafx.stage.WindowEvent;
 
 import java.io.IOException;
+import java.io.OutputStream;
+import java.io.PrintStream;
 
 /**
  * @author James F. Bowring
@@ -37,6 +39,7 @@ public class ET_TripoliGUI extends Application {
     public static final String ET_Tripoli_LOGO_SANS_TEXT_URL = "org/cirdles/et_tripoliapp/images/Tripoli2009.png";
     public static Window primaryStageWindow;
     protected static Stage primaryStage;
+    protected static ET_TripoliAboutWindow et_TripoliAboutWindow;
 
     public static void updateStageTitle(String fileName) {
         String fileSpec = "[Project File: NONE]";
@@ -46,6 +49,49 @@ public class ET_TripoliGUI extends Application {
     }
 
     public static void main(String[] args) {
+
+        // arg[0] : -v[erbose]
+        boolean verbose = false;
+        if (args.length > 0) {
+            verbose = args[0].startsWith("-v");
+        }
+
+//  http://patorjk.com/software/taag/#p=display&c=c%2B%2B&f=Stick%20Letters&t=ET_Tripoli
+//   ________  _________       _________          _                  __    _
+//  |_   __  ||  _   _  |     |  _   _  |        (_)                [  |  (_)
+//    | |_ \_||_/ | | \_|     |_/ | | \_|_ .--.  __  _ .--.    .--.  | |  __
+//    |  _| _     | |             | |   [ `/'`\][  |[ '/'`\ \/ .'`\ \| | [  |
+//   _| |__/ |   _| |_  _______  _| |_   | |     | | | \__/ || \__. || |  | |
+//  |________|  |_____||_______||_____| [___]   [___]| ;.__/  '.__.'[___][___]
+//                                                  [__|
+
+        StringBuilder logo = new StringBuilder();
+        logo.append("           ________  _________       _________          _                  __    _   \n");
+        logo.append("          |_   __  ||  _   _  |     |  _   _  |        (_)                [  |  (_)  \n");
+        logo.append("            | |_ \\_||_/ | | \\_|     |_/ | | \\_|_ .--.  __  _ .--.    .--.  | |  __  \n");
+        logo.append("            |  _| _     | |             | |   [ `/'`\\][  |[ '/'`\\ \\/ .'`\\ \\| | [  |  \n");
+        logo.append("           _| |__/ |   _| |_  _______  _| |_   | |     | | | \\__/ || \\__. || |  | |  \n");
+        logo.append("          |________|  |_____||_______||_____| [___]   [___]| ;.__/  '.__.'[___][___] \n");
+        logo.append("                                                          [__|           \n");
+        System.out.println(logo);
+
+        // detect if running from jar file
+        if (!verbose && (ClassLoader.getSystemResource("org/cirdles/et_tripoliapp/ET_TripoliGUI.class").toExternalForm().startsWith("jar"))) {
+            System.out.println(
+                    "Running ET_Tripoli from Jar file ... suppressing terminal output.\n"
+                            + "\t use '-verbose' argument after jar file name to enable terminal output.");
+            System.setOut(new PrintStream(new OutputStream() {
+                public void write(int b) {
+                    // NO-OP
+                }
+            }));
+            System.setErr(new PrintStream(new OutputStream() {
+                public void write(int b) {
+                    // NO-OP
+                }
+            }));
+        }
+
         launch();
     }
 
@@ -67,12 +113,14 @@ public class ET_TripoliGUI extends Application {
         });
 
         // postpone loading to allow for stage creation and use in controller
-        FXMLLoader loader = new FXMLLoader(ET_TripoliGUI.class.getResource("ET_TripoliGUIController.fxml"));
+        FXMLLoader loader = new FXMLLoader(ET_TripoliGUI.class.getResource("ET_TripoliGUI.fxml"));
         scene.setRoot(loader.load());
         scene.setUserData(loader.getController());
         primaryStage.show();
         primaryStage.setMinHeight(scene.getHeight() + 15);
         primaryStage.setMinWidth(scene.getWidth());
+
+        et_TripoliAboutWindow = new ET_TripoliAboutWindow(primaryStage);
 
     }
 }

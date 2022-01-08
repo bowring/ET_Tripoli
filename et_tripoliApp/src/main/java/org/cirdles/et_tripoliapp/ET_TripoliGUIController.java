@@ -16,6 +16,7 @@
 
 package org.cirdles.et_tripoliapp;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
@@ -42,10 +43,15 @@ public class ET_TripoliGUIController {
     private Label versionLabel; // Value injected by FXMLLoader
 
     @FXML
+    void showET_TripoliAbout(ActionEvent event) {
+        ET_TripoliGUI.et_TripoliAboutWindow.loadAboutWindow();
+    }
+
+    @FXML
         // This method is called by the FXMLLoader when initialization is complete
     void initialize() {
-        assert versionBuildDate != null : "fx:id=\"versionBuildDate\" was not injected: check your FXML file 'ET_TripoliGUIController.fxml'.";
-        assert versionLabel != null : "fx:id=\"versionLabel\" was not injected: check your FXML file 'ET_TripoliGUIController.fxml'.";
+        assert versionBuildDate != null : "fx:id=\"versionBuildDate\" was not injected: check your FXML file 'ET_TripoliGUI.fxml'.";
+        assert versionLabel != null : "fx:id=\"versionLabel\" was not injected: check your FXML file 'ET_TripoliGUI.fxml'.";
 
     }
 
