@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!--
 /*
  * Copyright 2022 James F. Bowring and CIRDLES.org.
@@ -16,6 +17,7 @@
  * limitations under the License.
  */
 -->
+
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
@@ -28,8 +30,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
-<VBox alignment="CENTER" prefHeight="528.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cirdles.et_tripoliapp.ET_TripoliGUIController">
+<VBox prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cirdles.et_tripoliapp.ET_TripoliGUIController">
    <MenuBar prefHeight="21.0" prefWidth="760.0" VBox.vgrow="NEVER">
      <menus>
        <Menu mnemonicParsing="false" text="File">
@@ -44,7 +45,7 @@
        </Menu>
        <Menu mnemonicParsing="false" text="Help">
          <items>
-           <MenuItem mnemonicParsing="false" text="About" />
+           <MenuItem mnemonicParsing="false" onAction="#showET_TripoliAbout" text="About" />
          </items>
        </Menu>
      </menus>

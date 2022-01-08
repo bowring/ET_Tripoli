@@ -8,6 +8,7 @@ module org.cirdles.et_tripoliapp {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires java.desktop;
 
     opens org.cirdles.et_tripoliapp to javafx.fxml;
     exports org.cirdles.et_tripoliapp;
