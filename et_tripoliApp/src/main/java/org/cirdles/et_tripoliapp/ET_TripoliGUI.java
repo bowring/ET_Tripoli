@@ -27,16 +27,17 @@ import javafx.stage.Stage;
 import javafx.stage.Window;
 import javafx.stage.WindowEvent;
 
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.PrintStream;
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.io.*;
+import java.net.URL;
 
 /**
  * @author James F. Bowring
  */
 public class ET_TripoliGUI extends Application {
 
-    public static final String ET_Tripoli_LOGO_SANS_TEXT_URL = "org/cirdles/et_tripoliapp/images/Tripoli2009.png";
+    public static final String ET_Tripoli_LOGO_SANS_TEXT_URL = "images/Tripoli2009.png";
     public static Window primaryStageWindow;
     protected static Stage primaryStage;
     protected static ET_TripoliAboutWindow et_TripoliAboutWindow;
@@ -96,12 +97,11 @@ public class ET_TripoliGUI extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) throws IOException {
+    public void start(Stage primaryStage) throws IOException, AWTException {
         ET_TripoliGUI.primaryStage = primaryStage;
         Parent root = new AnchorPane();
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
-        primaryStage.getIcons().add(new Image(ET_Tripoli_LOGO_SANS_TEXT_URL));
         updateStageTitle("");
 
         // this produces non-null window after .show()
@@ -119,6 +119,8 @@ public class ET_TripoliGUI extends Application {
         primaryStage.show();
         primaryStage.setMinHeight(scene.getHeight() + 15);
         primaryStage.setMinWidth(scene.getWidth());
+
+        primaryStage.getIcons().add(new Image(ET_TripoliGUI.class.getResourceAsStream( ET_Tripoli_LOGO_SANS_TEXT_URL )));
 
         et_TripoliAboutWindow = new ET_TripoliAboutWindow(primaryStage);
 

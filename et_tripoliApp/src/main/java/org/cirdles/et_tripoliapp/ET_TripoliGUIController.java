@@ -19,9 +19,12 @@ package org.cirdles.et_tripoliapp;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import static org.cirdles.et_tripoliapp.ET_TripoliGUI.primaryStage;
 
 /**
  * @author James F. Bowring
