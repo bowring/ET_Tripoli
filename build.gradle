@@ -18,8 +18,8 @@ plugins {
     id 'java'
 }
 
-group 'org.cirdles'
-version '1.0.0'
+//group 'org.cirdles'
+//version '1.0.0'
 
 repositories {
     mavenCentral()

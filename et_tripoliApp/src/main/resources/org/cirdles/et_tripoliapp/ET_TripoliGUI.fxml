@@ -50,7 +50,7 @@
        </Menu>
      </menus>
    </MenuBar>
-   <AnchorPane prefHeight="518.0" prefWidth="760.0">
+   <AnchorPane prefHeight="673.0" prefWidth="900.0" style="-fx-background-color: #faf0e6;" VBox.vgrow="ALWAYS">
       <children>
          <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <center>
