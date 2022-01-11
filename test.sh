@@ -9,7 +9,7 @@ ls jre-17.0.1-full
 echo ""
 
 echo "getting Gradle7            **************************"
-wget -O  gradle7.zip https://gradle.org/next-steps/?version=7.3.3&format=bin
+wget -O  gradle7.zip https://services.gradle.org/distributions/gradle-7.3.3-bin.zip
 mkdir gradle7
 unzip -d gradle7 gradle7.zip
 ls gradle7/gradle-7.3.3
