@@ -16,5 +16,5 @@ ls gradle7/gradle-7.3.3
 echo ""
 
 echo "building ET_Tripoli        **************************"
-gradle7/gradle-7.3.3/bin/gradle clean build -Dorg.gradle.java.home=/jre-17.0.1-full/
+gradle7/gradle-7.3.3/bin/gradle clean build -Dorg.gradle.java.home=./jre-17.0.1-full/
 
