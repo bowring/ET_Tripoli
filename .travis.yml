@@ -2,4 +2,5 @@ language: bash
 
 sudo: required
 
-script: chmod u+x bash test.sh
+script: chmod u+x test.sh
+script: bash test.sh
