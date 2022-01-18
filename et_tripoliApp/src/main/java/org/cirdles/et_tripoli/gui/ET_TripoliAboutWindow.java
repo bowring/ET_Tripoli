@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.cirdles.et_tripoliapp;
+package org.cirdles.et_tripoli.gui;
 
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -82,6 +82,7 @@ public final class ET_TripoliAboutWindow {
 
             aboutWindow.show();
         } catch (IOException iOException) {
+            iOException.printStackTrace();
         }
     }
 

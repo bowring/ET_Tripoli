@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.cirdles.et_tripoliapp.dialogs;
+package org.cirdles.et_tripoli.gui.dialogs;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonBar;

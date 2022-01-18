@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cirdles.et_tripoliapp;
+package org.cirdles.et_tripoli.gui;
 
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -27,10 +27,8 @@ import javafx.stage.Stage;
 import javafx.stage.Window;
 import javafx.stage.WindowEvent;
 
-import javax.imageio.ImageIO;
 import java.awt.*;
 import java.io.*;
-import java.net.URL;
 
 /**
  * @author James F. Bowring
@@ -77,7 +75,7 @@ public class ET_TripoliGUI extends Application {
         System.out.println(logo);
 
         // detect if running from jar file
-        if (!verbose && (ClassLoader.getSystemResource("org/cirdles/et_tripoliapp/ET_TripoliGUI.class").toExternalForm().startsWith("jar"))) {
+        if (!verbose && (ClassLoader.getSystemResource("org/cirdles/et_tripoli/gui/ET_TripoliGUI.class").toExternalForm().startsWith("jar"))) {
             System.out.println(
                     "Running ET_Tripoli from Jar file ... suppressing terminal output.\n"
                             + "\t use '-verbose' argument after jar file name to enable terminal output.");

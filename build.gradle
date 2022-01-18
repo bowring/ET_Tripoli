@@ -14,22 +14,12 @@
  * limitations under the License.
  */
 
-plugins {
-    id 'java'
+apply plugin: 'base'
+
+subprojects {
+    apply from: rootProject.file('common.gradle')
 }
 
-//group 'org.cirdles'
-//version '1.0.0'
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
-}
-
-test {
-    useJUnitPlatform()
+wrapper {
+    gradleVersion = '7.3-rc-2'
 }

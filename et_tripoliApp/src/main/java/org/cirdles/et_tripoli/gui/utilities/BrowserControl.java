@@ -13,18 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.cirdles.et_tripoliapp.utilities;
+package org.cirdles.et_tripoli.gui.utilities;
 
 import javafx.stage.Window;
-import org.cirdles.et_tripoliapp.ET_TripoliGUI;
-import org.cirdles.et_tripoliapp.dialogs.ET_TripoliMessageDialog;
+import org.cirdles.et_tripoli.gui.ET_TripoliGUI;
+import org.cirdles.et_tripoli.gui.dialogs.ET_TripoliMessageDialog;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+
 
 /**
  * @author James F. Bowring
@@ -56,8 +58,8 @@ public class BrowserControl {
         showURI(location, ET_TripoliGUI.primaryStageWindow);
     }
 
-    public static String urlEncode(String text) {
-        return URLEncoder.encode(text, StandardCharsets.UTF_8);
+    public static String urlEncode(String text) throws UnsupportedEncodingException {
+        return URLEncoder.encode(text, "UTF_8");
     }
 
     public static String getOperatingSystem() {
