@@ -28,7 +28,7 @@ If you need to have a copy of ET_Tripoli that runs on a specific OS and a Java J
 
 ***Note to Developers***
 
-ET_Tripoli can be compiled from the source code by using Gradle 7.2 using the same JDK/JRE 17.
+ET_Tripoli can be compiled from the source code by using [Gradle 7.3](https://gradle.org/releases/) using the same JDK/JRE 17.
 ```text
 gradle clean build 
 ```
