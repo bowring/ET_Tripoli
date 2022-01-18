@@ -21,7 +21,6 @@ import org.cirdles.et_tripoli.gui.dialogs.ET_TripoliMessageDialog;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URLEncoder;
@@ -35,7 +34,7 @@ public class BrowserControl {
 
     public static void showURI(String location, Window ownerWindow) {
         try {
-            URI oURL = null;
+            URI oURL;
             if (location.contains("http")) {
                 oURL = new URI(location);
             } else {
@@ -50,7 +49,7 @@ public class BrowserControl {
                 Runtime.getRuntime().exec("xdg-open " + oURL);
             }
         } catch (URISyntaxException | IOException e) {
-            ET_TripoliMessageDialog.showWarningDialog("An error ocurred:\n" + e.getMessage(), ownerWindow);
+            ET_TripoliMessageDialog.showWarningDialog("An error occurred:\n" + e.getMessage(), ownerWindow);
         }
     }
 
@@ -58,8 +57,8 @@ public class BrowserControl {
         showURI(location, ET_TripoliGUI.primaryStageWindow);
     }
 
-    public static String urlEncode(String text) throws UnsupportedEncodingException {
-        return URLEncoder.encode(text, "UTF_8");
+    public static String urlEncode(String text) {
+        return URLEncoder.encode(text, StandardCharsets.UTF_8);
     }
 
     public static String getOperatingSystem() {
