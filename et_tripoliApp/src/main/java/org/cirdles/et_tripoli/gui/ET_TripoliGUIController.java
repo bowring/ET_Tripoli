@@ -14,17 +14,15 @@
  * limitations under the License.
  */
 
-package org.cirdles.et_tripoliapp;
+package org.cirdles.et_tripoli.gui;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
+import org.cirdles.et_tripoli.ET_Tripoli;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-
-import static org.cirdles.et_tripoliapp.ET_TripoliGUI.primaryStage;
 
 /**
  * @author James F. Bowring
@@ -53,9 +51,8 @@ public class ET_TripoliGUIController {
     @FXML
         // This method is called by the FXMLLoader when initialization is complete
     void initialize() {
-        assert versionBuildDate != null : "fx:id=\"versionBuildDate\" was not injected: check your FXML file 'ET_TripoliGUI.fxml'.";
-        assert versionLabel != null : "fx:id=\"versionLabel\" was not injected: check your FXML file 'ET_TripoliGUI.fxml'.";
-
+        versionLabel.setText("v" + ET_Tripoli.VERSION);
+        versionBuildDate.setText(ET_Tripoli.RELEASE_DATE);
     }
 
 }

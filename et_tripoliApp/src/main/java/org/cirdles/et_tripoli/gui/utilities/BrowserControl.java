@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.cirdles.et_tripoliapp.utilities;
+package org.cirdles.et_tripoli.gui.utilities;
 
 import javafx.stage.Window;
-import org.cirdles.et_tripoliapp.ET_TripoliGUI;
-import org.cirdles.et_tripoliapp.dialogs.ET_TripoliMessageDialog;
+import org.cirdles.et_tripoli.gui.ET_TripoliGUI;
+import org.cirdles.et_tripoli.gui.dialogs.ET_TripoliMessageDialog;
 
 import java.io.File;
 import java.io.IOException;
@@ -26,6 +26,7 @@ import java.net.URISyntaxException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 
+
 /**
  * @author James F. Bowring
  */
@@ -33,7 +34,7 @@ public class BrowserControl {
 
     public static void showURI(String location, Window ownerWindow) {
         try {
-            URI oURL = null;
+            URI oURL;
             if (location.contains("http")) {
                 oURL = new URI(location);
             } else {
@@ -48,7 +49,7 @@ public class BrowserControl {
                 Runtime.getRuntime().exec("xdg-open " + oURL);
             }
         } catch (URISyntaxException | IOException e) {
-            ET_TripoliMessageDialog.showWarningDialog("An error ocurred:\n" + e.getMessage(), ownerWindow);
+            ET_TripoliMessageDialog.showWarningDialog("An error occurred:\n" + e.getMessage(), ownerWindow);
         }
     }
 

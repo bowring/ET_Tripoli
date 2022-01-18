@@ -15,47 +15,27 @@
  */
 
 plugins {
-    id 'java'
     id 'application'
-    id 'org.openjfx.javafxplugin' version '0.0.10'
-//    id 'org.beryx.jlink' version '2.24.1'
 }
 
-group 'org.cirdles'
-version '1.0.0'
-
-repositories {
-    mavenCentral()
+if (!hasProperty('mainClass')) {
+    ext.mainClass = 'org.cirdles.et_tripoli.gui.ET_TripoliGUI'
 }
 
-ext {
-    junitVersion = '5.8.2'
-}
-
-sourceCompatibility = '17'
-targetCompatibility = '17'
-
-tasks.withType(JavaCompile) {
-    options.encoding = 'UTF-8'
-}
-
-application {
-    mainModule = 'org.cirdles.et_tripoliapp'
-    mainClass = 'org.cirdles.et_tripoliapp.ET_TripoliGUI'
-    description = "ET_Tripoli GUI"
-    archivesBaseName = "ET_Tripoli"
-}
+mainClassName = 'org.cirdles.et_tripoli.gui.ET_TripoliGUI'
 
 dependencies {
-    implementation('org.controlsfx:controlsfx:11.1.1')
-    implementation('com.dlsc.formsfx:formsfx-core:11.4.2') {
-        exclude(group: 'org.openjfx')
-    }
-    implementation('org.kordamp.ikonli:ikonli-javafx:12.2.0')
-    implementation('org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0')
-    implementation('eu.hansolo:tilesfx:17.0.11') {
-        exclude(group: 'org.openjfx')
-    }
+    implementation 'org.jetbrains:annotations:22.0.0'
+    implementation project(":et_tripoliCore")
+//    implementation('org.controlsfx:controlsfx:11.1.1')
+//    implementation('com.dlsc.formsfx:formsfx-core:11.4.2') {
+//        exclude(group: 'org.openjfx')
+//    }
+//    implementation('org.kordamp.ikonli:ikonli-javafx:12.2.0')
+//    implementation('org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0')
+//    implementation('eu.hansolo:tilesfx:17.0.11') {
+//        exclude(group: 'org.openjfx')
+//    }
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
@@ -65,22 +45,15 @@ test {
     useJUnitPlatform()
 }
 
-//jlink {
-//    imageZip = project.file("${buildDir}/distributions/app-${javafx.platform.classifier}.zip")
-//    options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
-//    launcher {
-//        name = 'app'
-//    }
-//}
-//
-//jlinkZip {
-//    group = 'distribution'
-//}
+project(":et_tripoliApp") {
+    description = "ET_Tripoli GUI"
+    archivesBaseName = "ET_Tripoli"
+}
 
 task fatAppJar(type: Jar) {
     dependsOn(et_tripoliCore:build)
     manifest {
-        attributes ('Main-Class': 'org.cirdles.et_tripoliapp.ET_TripoliGUI')
+        attributes ('Main-Class': 'org.cirdles.et_tripoli.gui.ET_TripoliGUI')
     }
     duplicatesStrategy = DuplicatesStrategy.INCLUDE
     from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }

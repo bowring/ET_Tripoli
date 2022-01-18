@@ -14,14 +14,15 @@
  * limitations under the License.
  */
 
-package org.cirdles.et_tripoliapp;
+package org.cirdles.et_tripoli.gui;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import org.cirdles.et_tripoliapp.utilities.BrowserControl;
+import org.cirdles.et_tripoli.ET_Tripoli;
+import org.cirdles.et_tripoli.gui.utilities.BrowserControl;
 
 public class AboutET_TripoliController {
 
@@ -58,12 +59,11 @@ public class AboutET_TripoliController {
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {
-        assert aboutDetailsLabel != null : "fx:id=\"aboutDetailsLabel\" was not injected: check your FXML file 'AboutET_Tripoli.fxml'.";
-        assert buildDate != null : "fx:id=\"buildDate\" was not injected: check your FXML file 'AboutET_Tripoli.fxml'.";
-        assert contributorsLabel != null : "fx:id=\"contributorsLabel\" was not injected: check your FXML file 'AboutET_Tripoli.fxml'.";
-        assert supportersLabel != null : "fx:id=\"supportersLabel\" was not injected: check your FXML file 'AboutET_Tripoli.fxml'.";
-        assert versionText != null : "fx:id=\"versionText\" was not injected: check your FXML file 'AboutET_Tripoli.fxml'.";
-
+        versionText.setText("ET_Tripoli v" + ET_Tripoli.VERSION);
+        buildDate.setText("Release Date: " + ET_Tripoli.RELEASE_DATE);
+        aboutDetailsLabel.setText(ET_Tripoli.ABOUT_WINDOW_CONTENT.toString());
+        contributorsLabel.setText(ET_Tripoli.CONTRIBUTORS_CONTENT.toString());
+        supportersLabel.setText(ET_Tripoli.SUPPORTERS_CONTENT.toString());
     }
 
 }
