@@ -3,9 +3,9 @@
 echo "Hello Travis ****************************************"
 echo ""
 echo "getting Liberica 17 full   **************************"
-wget -O  libjava17.tar.gz https://download.bell-sw.com/java/17.0.1+12/bellsoft-jre17.0.1+12-linux-amd64-full.tar.gz
+wget -O  libjava17.tar.gz https://download.bell-sw.com/java/17.0.1+12/bellsoft-jdk17.0.1+12-linux-amd64-full.tar.gz
 tar -xf libjava17.tar.gz
-ls jre-17.0.1-full
+ls jdk-17.0.1-full
 echo ""
 
 echo "getting Gradle7            **************************"
@@ -16,5 +16,5 @@ ls gradle7/gradle-7.3.3
 echo ""
 
 echo "building ET_Tripoli        **************************"
-gradle7/gradle-7.3.3/bin/gradle clean build -Dorg.gradle.java.home=./jre-17.0.1-full/
+gradle7/gradle-7.3.3/bin/gradle clean build -Dorg.gradle.java.home=./jdk-17.0.1-full/
 
