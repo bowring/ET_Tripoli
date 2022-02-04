@@ -31,7 +31,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="725.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cirdles.et_tripoli.gui.ET_TripoliGUIController">
+<VBox prefHeight="725.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cirdles.tripoli.gui.ET_TripoliGUIController">
    <MenuBar prefHeight="17.0" prefWidth="1234.0" VBox.vgrow="NEVER">
      <menus>
        <Menu mnemonicParsing="false" text="Project">

@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.cirdles.et_tripoli.gui.utilities;
+package org.cirdles.tripoli.gui.utilities;
 
 import javafx.stage.Window;
-import org.cirdles.et_tripoli.gui.TripoliGUI;
-import org.cirdles.et_tripoli.gui.dialogs.ET_TripoliMessageDialog;
+import org.cirdles.tripoli.gui.TripoliGUI;
+import org.cirdles.tripoli.gui.dialogs.ET_TripoliMessageDialog;
 
 import java.io.File;
 import java.io.IOException;

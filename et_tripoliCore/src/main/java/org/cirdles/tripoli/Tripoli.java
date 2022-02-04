@@ -14,15 +14,12 @@
  * limitations under the License.
  */
 
-package org.cirdles.et_tripoli;
+package org.cirdles.tripoli;
 
 import org.cirdles.commons.util.ResourceExtractor;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.URL;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -31,7 +28,7 @@ import java.nio.file.Path;
 /**
  * @author James F. Bowring
  */
-public class ET_Tripoli {
+public class Tripoli {
     public static final String VERSION;
     public static  final  String RELEASE_DATE;
 
@@ -40,7 +37,7 @@ public class ET_Tripoli {
     public static  final  StringBuilder SUPPORTERS_CONTENT = new StringBuilder();
 
     public static  final  ResourceExtractor ET_TRIPOLI_RESOURCE_EXTRACTOR
-            = new ResourceExtractor(ET_Tripoli.class);
+            = new ResourceExtractor(Tripoli.class);
 
   static {
         String version = "version";
@@ -70,36 +67,36 @@ public class ET_Tripoli {
         RELEASE_DATE = releaseDate;
 
         // get content for about window
-        resourcePath = ET_Tripoli.ET_TRIPOLI_RESOURCE_EXTRACTOR.extractResourceAsPath("docs/aboutContent.txt");
+        resourcePath = Tripoli.ET_TRIPOLI_RESOURCE_EXTRACTOR.extractResourceAsPath("docs/aboutContent.txt");
         try (BufferedReader reader = Files.newBufferedReader(resourcePath, charset)) {
             String thisLine;
 
             while ((thisLine = reader.readLine()) != null) {
-                ET_Tripoli.ABOUT_WINDOW_CONTENT.append(thisLine);
+                Tripoli.ABOUT_WINDOW_CONTENT.append(thisLine);
             }
 
         } catch (IOException x) {
             System.err.format("IOException: %s%n", x);
         }
 
-        resourcePath = ET_Tripoli.ET_TRIPOLI_RESOURCE_EXTRACTOR.extractResourceAsPath("docs/contributorsContent.txt");
+        resourcePath = Tripoli.ET_TRIPOLI_RESOURCE_EXTRACTOR.extractResourceAsPath("docs/contributorsContent.txt");
         try (BufferedReader reader = Files.newBufferedReader(resourcePath, charset)) {
             String thisLine;
 
             while ((thisLine = reader.readLine()) != null) {
-                ET_Tripoli.CONTRIBUTORS_CONTENT.append(thisLine);
+                Tripoli.CONTRIBUTORS_CONTENT.append(thisLine);
             }
 
         } catch (IOException x) {
             System.err.format("IOException: %s%n", x);
         }
 
-        resourcePath = ET_Tripoli.ET_TRIPOLI_RESOURCE_EXTRACTOR.extractResourceAsPath("docs/supportersContent.txt");
+        resourcePath = Tripoli.ET_TRIPOLI_RESOURCE_EXTRACTOR.extractResourceAsPath("docs/supportersContent.txt");
         try (BufferedReader reader = Files.newBufferedReader(resourcePath, charset)) {
             String thisLine;
 
             while ((thisLine = reader.readLine()) != null) {
-                ET_Tripoli.SUPPORTERS_CONTENT.append(thisLine);
+                Tripoli.SUPPORTERS_CONTENT.append(thisLine);
             }
 
         } catch (IOException x) {

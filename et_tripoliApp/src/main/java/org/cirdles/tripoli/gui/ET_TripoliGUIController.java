@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.cirdles.et_tripoli.gui;
+package org.cirdles.tripoli.gui;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import org.cirdles.et_tripoli.ET_Tripoli;
+import org.cirdles.tripoli.Tripoli;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -51,8 +51,8 @@ public class ET_TripoliGUIController {
     @FXML
         // This method is called by the FXMLLoader when initialization is complete
     void initialize() {
-        versionLabel.setText("v" + ET_Tripoli.VERSION);
-        versionBuildDate.setText(ET_Tripoli.RELEASE_DATE);
+        versionLabel.setText("v" + Tripoli.VERSION);
+        versionBuildDate.setText(Tripoli.RELEASE_DATE);
     }
 
 }

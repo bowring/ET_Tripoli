@@ -23,7 +23,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="550.0" styleClass="main-Pain" stylesheets="@css/about.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cirdles.et_tripoli.gui.AboutET_TripoliController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="550.0" styleClass="main-Pain" stylesheets="@css/about.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cirdles.tripoli.gui.AboutET_TripoliController">
     <children>
         <Label fx:id="versionText" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="94.0" layoutY="206.0" prefHeight="45.0" prefWidth="360.0" text="ET_Tripoli  v 1.0.0" textAlignment="CENTER">
             <styleClass>

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.cirdles.et_tripoli.gui.dialogs;
+package org.cirdles.tripoli.gui.dialogs;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonBar;
@@ -39,7 +39,7 @@ public class ET_TripoliMessageDialog extends Alert {
     public ET_TripoliMessageDialog(AlertType alertType, String message, String headerText, Window owner) {
         super(alertType);
         initOwner(owner);
-        setTitle("ET_Tripoli Alert");
+        setTitle("Tripoli Alert");
         setContentText((message == null) ? "Unknown error ..." : message);
         setHeaderText(headerText);
         initStyle(StageStyle.DECORATED);
@@ -56,7 +56,7 @@ public class ET_TripoliMessageDialog extends Alert {
      * @param owner
      */
     public static void showWarningDialog(String message, Window owner) {
-        Alert alert = new ET_TripoliMessageDialog(AlertType.WARNING, message, "ET_Tripoli warns you:", owner);
+        Alert alert = new ET_TripoliMessageDialog(AlertType.WARNING, message, "Tripoli warns you:", owner);
         alert.showAndWait();
     }
 
@@ -68,7 +68,7 @@ public class ET_TripoliMessageDialog extends Alert {
         Alert alert = new ET_TripoliMessageDialog(
                 AlertType.INFORMATION,
                 message,
-                "ET_Tripoli informs you:", owner);
+                "Tripoli informs you:", owner);
         alert.showAndWait();
     }
 

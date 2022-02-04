@@ -19,10 +19,10 @@ plugins {
 }
 
 if (!hasProperty('mainClass')) {
-    ext.mainClass = 'org.cirdles.et_tripoli.gui.TripoliGUI'
+    ext.mainClass = 'org.cirdles.tripoli.gui.TripoliGUI'
 }
 
-mainClassName = 'org.cirdles.et_tripoli.gui.TripoliGUI'
+mainClassName = 'org.cirdles.tripoli.gui.TripoliGUI'
 
 dependencies {
     implementation 'org.jetbrains:annotations:22.0.0'
@@ -53,7 +53,7 @@ project(":et_tripoliApp") {
 task fatAppJar(type: Jar) {
     dependsOn(et_tripoliCore:build)
     manifest {
-        attributes ('Main-Class': 'org.cirdles.et_tripoli.gui.TripoliGUI')
+        attributes ('Main-Class': 'org.cirdles.tripoli.gui.TripoliGUI')
     }
     duplicatesStrategy = DuplicatesStrategy.INCLUDE
     from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }

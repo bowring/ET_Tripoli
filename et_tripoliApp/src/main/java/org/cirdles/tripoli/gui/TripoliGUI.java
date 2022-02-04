@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cirdles.et_tripoli.gui;
+package org.cirdles.tripoli.gui;
 
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -43,7 +43,7 @@ public class TripoliGUI extends Application {
     public static void updateStageTitle(String fileName) {
         String fileSpec = "[Project File: NONE]";
         fileSpec = fileName.length() > 0 ? fileSpec.replace("NONE", fileName) : fileSpec;
-        primaryStage.setTitle("ET_Tripoli  " + fileSpec);
+        primaryStage.setTitle("Tripoli  " + fileSpec);
         ET_TripoliGUIController.projectFileName = fileName;
     }
 
@@ -76,9 +76,9 @@ public class TripoliGUI extends Application {
 
 
         // detect if running from jar file
-        if (!verbose && (ClassLoader.getSystemResource("org/cirdles/et_tripoli/gui/TripoliGUI.class").toExternalForm().startsWith("jar"))) {
+        if (!verbose && (ClassLoader.getSystemResource("org/cirdles/tripoli/gui/TripoliGUI.class").toExternalForm().startsWith("jar"))) {
             System.out.println(
-                    "Running ET_Tripoli from Jar file ... suppressing terminal output.\n"
+                    "Running Tripoli from Jar file ... suppressing terminal output.\n"
                             + "\t use '-verbose' argument after jar file name to enable terminal output.");
             System.setOut(new PrintStream(new OutputStream() {
                 public void write(int b) {
