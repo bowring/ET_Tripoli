@@ -55,24 +55,25 @@ public class ET_TripoliGUI extends Application {
             verbose = args[0].startsWith("-v");
         }
 
-//  http://patorjk.com/software/taag/#p=display&c=c%2B%2B&f=Stick%20Letters&t=ET_Tripoli
-//   ________  _________       _________          _                  __    _
-//  |_   __  ||  _   _  |     |  _   _  |        (_)                [  |  (_)
-//    | |_ \_||_/ | | \_|     |_/ | | \_|_ .--.  __  _ .--.    .--.  | |  __
-//    |  _| _     | |             | |   [ `/'`\][  |[ '/'`\ \/ .'`\ \| | [  |
-//   _| |__/ |   _| |_  _______  _| |_   | |     | | | \__/ || \__. || |  | |
-//  |________|  |_____||_______||_____| [___]   [___]| ;.__/  '.__.'[___][___]
-//                                                  [__|
+//  http://patorjk.com/software/taag/#p=display&c=c%2B%2B&f=Varsity&t=Tripoli
+//   _________          _                  __    _
+//  |  _   _  |        (_)                [  |  (_)
+//  |_/ | | \_|_ .--.  __  _ .--.    .--.  | |  __
+//      | |   [ `/'`\][  |[ '/'`\ \/ .'`\ \| | [  |
+//     _| |_   | |     | | | \__/ || \__. || |  | |
+//    |_____| [___]   [___]| ;.__/  '.__.'[___][___]
+//                        [__|
 
         StringBuilder logo = new StringBuilder();
-        logo.append("           ________  _________       _________          _                  __    _   \n");
-        logo.append("          |_   __  ||  _   _  |     |  _   _  |        (_)                [  |  (_)  \n");
-        logo.append("            | |_ \\_||_/ | | \\_|     |_/ | | \\_|_ .--.  __  _ .--.    .--.  | |  __  \n");
-        logo.append("            |  _| _     | |             | |   [ `/'`\\][  |[ '/'`\\ \\/ .'`\\ \\| | [  |  \n");
-        logo.append("           _| |__/ |   _| |_  _______  _| |_   | |     | | | \\__/ || \\__. || |  | |  \n");
-        logo.append("          |________|  |_____||_______||_____| [___]   [___]| ;.__/  '.__.'[___][___] \n");
-        logo.append("                                                          [__|           \n");
+        logo.append("        _________          _                  __    _   \n");
+        logo.append("       |  _   _  |        (_)                [  |  (_)  \n");
+        logo.append("       |_/ | | \\_|_ .--.  __  _ .--.    .--.  | |  __   \n");
+        logo.append("           | |   [ `/'`\\][  |[ '/'`\\ \\/ .'`\\ \\| | [  |  \n");
+        logo.append("          _| |_   | |     | | | \\__/ || \\__. || |  | |  \n");
+        logo.append("         |_____| [___]   [___]| ;.__/  '.__.'[___][___] \n");
+        logo.append("                             [__|                       \n");
         System.out.println(logo);
+
 
         // detect if running from jar file
         if (!verbose && (ClassLoader.getSystemResource("org/cirdles/et_tripoli/gui/ET_TripoliGUI.class").toExternalForm().startsWith("jar"))) {

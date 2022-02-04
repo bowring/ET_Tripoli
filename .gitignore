@@ -51,8 +51,8 @@ test_*
 
 
 # Resources
-!et_tripoliapp/src/main/resources/org/cirdles/et_tripoli.gui/images/Tripoli2009.png
-
+!et_tripoliApp/src/main/resources/org/cirdles/et_tripoli/gui/images/*.png
+!et_tripoliCore/src/main/resources/org/cirdles/et_tripoli/docs/*.txt
 
 # Testing resources
 
