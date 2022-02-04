@@ -33,7 +33,7 @@ import java.io.*;
 /**
  * @author James F. Bowring
  */
-public class ET_TripoliGUI extends Application {
+public class TripoliGUI extends Application {
 
     public static final String ET_Tripoli_LOGO_SANS_TEXT_URL = "images/Tripoli2009.png";
     public static Window primaryStageWindow;
@@ -76,7 +76,7 @@ public class ET_TripoliGUI extends Application {
 
 
         // detect if running from jar file
-        if (!verbose && (ClassLoader.getSystemResource("org/cirdles/et_tripoli/gui/ET_TripoliGUI.class").toExternalForm().startsWith("jar"))) {
+        if (!verbose && (ClassLoader.getSystemResource("org/cirdles/et_tripoli/gui/TripoliGUI.class").toExternalForm().startsWith("jar"))) {
             System.out.println(
                     "Running ET_Tripoli from Jar file ... suppressing terminal output.\n"
                             + "\t use '-verbose' argument after jar file name to enable terminal output.");
@@ -97,7 +97,7 @@ public class ET_TripoliGUI extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException, AWTException {
-        ET_TripoliGUI.primaryStage = primaryStage;
+        TripoliGUI.primaryStage = primaryStage;
         Parent root = new AnchorPane();
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
@@ -112,14 +112,14 @@ public class ET_TripoliGUI extends Application {
         });
 
         // postpone loading to allow for stage creation and use in controller
-        FXMLLoader loader = new FXMLLoader(ET_TripoliGUI.class.getResource("ET_TripoliGUI.fxml"));
+        FXMLLoader loader = new FXMLLoader(TripoliGUI.class.getResource("TripoliGUI.fxml"));
         scene.setRoot(loader.load());
         scene.setUserData(loader.getController());
         primaryStage.show();
         primaryStage.setMinHeight(scene.getHeight() + 15);
         primaryStage.setMinWidth(scene.getWidth());
 
-        primaryStage.getIcons().add(new Image(ET_TripoliGUI.class.getResourceAsStream( ET_Tripoli_LOGO_SANS_TEXT_URL )));
+        primaryStage.getIcons().add(new Image(TripoliGUI.class.getResourceAsStream( ET_Tripoli_LOGO_SANS_TEXT_URL )));
 
         et_TripoliAboutWindow = new ET_TripoliAboutWindow(primaryStage);
 

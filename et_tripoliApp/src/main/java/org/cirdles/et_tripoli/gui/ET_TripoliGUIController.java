@@ -45,7 +45,7 @@ public class ET_TripoliGUIController {
 
     @FXML
     void showET_TripoliAbout(ActionEvent event) {
-        ET_TripoliGUI.et_TripoliAboutWindow.loadAboutWindow();
+        TripoliGUI.et_TripoliAboutWindow.loadAboutWindow();
     }
 
     @FXML

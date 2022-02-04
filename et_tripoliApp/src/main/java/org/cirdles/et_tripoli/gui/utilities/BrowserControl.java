@@ -16,7 +16,7 @@
 package org.cirdles.et_tripoli.gui.utilities;
 
 import javafx.stage.Window;
-import org.cirdles.et_tripoli.gui.ET_TripoliGUI;
+import org.cirdles.et_tripoli.gui.TripoliGUI;
 import org.cirdles.et_tripoli.gui.dialogs.ET_TripoliMessageDialog;
 
 import java.io.File;
@@ -54,7 +54,7 @@ public class BrowserControl {
     }
 
     public static void showURI(String location) {
-        showURI(location, ET_TripoliGUI.primaryStageWindow);
+        showURI(location, TripoliGUI.primaryStageWindow);
     }
 
     public static String urlEncode(String text) {
