@@ -44,7 +44,7 @@ public class TripoliGUIController {
     private Label versionLabel; // Value injected by FXMLLoader
 
     @FXML
-    void showET_TripoliAbout(ActionEvent event) {
+    void showTripoliAbout(ActionEvent event) {
         TripoliGUI.TripoliAboutWindow.loadAboutWindow();
     }
 

@@ -59,7 +59,7 @@
        </Menu>
        <Menu mnemonicParsing="false" text="Help">
          <items>
-           <MenuItem mnemonicParsing="false" onAction="#showET_TripoliAbout" text="About" />
+           <MenuItem mnemonicParsing="false" onAction="#showTripoliAbout" text="About" />
          </items>
        </Menu>
      </menus>
