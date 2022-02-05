@@ -35,16 +35,16 @@ import java.io.*;
  */
 public class TripoliGUI extends Application {
 
-    public static final String ET_Tripoli_LOGO_SANS_TEXT_URL = "images/Tripoli2009.png";
+    public static final String Tripoli_LOGO_SANS_TEXT_URL = "images/Tripoli2009.png";
     public static Window primaryStageWindow;
     protected static Stage primaryStage;
-    protected static ET_TripoliAboutWindow et_TripoliAboutWindow;
+    protected static TripoliAboutWindow TripoliAboutWindow;
 
     public static void updateStageTitle(String fileName) {
         String fileSpec = "[Project File: NONE]";
         fileSpec = fileName.length() > 0 ? fileSpec.replace("NONE", fileName) : fileSpec;
         primaryStage.setTitle("Tripoli  " + fileSpec);
-        ET_TripoliGUIController.projectFileName = fileName;
+        TripoliGUIController.projectFileName = fileName;
     }
 
     public static void main(String[] args) {
@@ -119,9 +119,9 @@ public class TripoliGUI extends Application {
         primaryStage.setMinHeight(scene.getHeight() + 15);
         primaryStage.setMinWidth(scene.getWidth());
 
-        primaryStage.getIcons().add(new Image(TripoliGUI.class.getResourceAsStream( ET_Tripoli_LOGO_SANS_TEXT_URL )));
+        primaryStage.getIcons().add(new Image(TripoliGUI.class.getResourceAsStream(Tripoli_LOGO_SANS_TEXT_URL)));
 
-        et_TripoliAboutWindow = new ET_TripoliAboutWindow(primaryStage);
+        TripoliAboutWindow = new TripoliAboutWindow(primaryStage);
 
     }
 }

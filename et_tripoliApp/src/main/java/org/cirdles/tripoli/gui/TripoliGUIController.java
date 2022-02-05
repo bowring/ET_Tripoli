@@ -27,7 +27,7 @@ import java.util.ResourceBundle;
 /**
  * @author James F. Bowring
  */
-public class ET_TripoliGUIController {
+public class TripoliGUIController {
 
     public static String projectFileName;
 
@@ -45,7 +45,7 @@ public class ET_TripoliGUIController {
 
     @FXML
     void showET_TripoliAbout(ActionEvent event) {
-        TripoliGUI.et_TripoliAboutWindow.loadAboutWindow();
+        TripoliGUI.TripoliAboutWindow.loadAboutWindow();
     }
 
     @FXML

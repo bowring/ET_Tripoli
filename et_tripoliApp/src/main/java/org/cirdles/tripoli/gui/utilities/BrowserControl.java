@@ -17,7 +17,7 @@ package org.cirdles.tripoli.gui.utilities;
 
 import javafx.stage.Window;
 import org.cirdles.tripoli.gui.TripoliGUI;
-import org.cirdles.tripoli.gui.dialogs.ET_TripoliMessageDialog;
+import org.cirdles.tripoli.gui.dialogs.TripoliMessageDialog;
 
 import java.io.File;
 import java.io.IOException;
@@ -49,7 +49,7 @@ public class BrowserControl {
                 Runtime.getRuntime().exec("xdg-open " + oURL);
             }
         } catch (URISyntaxException | IOException e) {
-            ET_TripoliMessageDialog.showWarningDialog("An error occurred:\n" + e.getMessage(), ownerWindow);
+            TripoliMessageDialog.showWarningDialog("An error occurred:\n" + e.getMessage(), ownerWindow);
         }
     }
 

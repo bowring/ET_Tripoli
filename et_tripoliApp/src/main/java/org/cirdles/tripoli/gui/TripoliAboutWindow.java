@@ -29,16 +29,16 @@ import java.io.IOException;
 /**
  * @author James F. Bowring
  */
-public final class ET_TripoliAboutWindow {
+public final class TripoliAboutWindow {
 
     private Stage primaryStage;
     private double xOffset = 0;
     private double yOffset = 0;
 
-    private ET_TripoliAboutWindow() {
+    private TripoliAboutWindow() {
     }
 
-    public ET_TripoliAboutWindow(Stage primaryStage) {
+    public TripoliAboutWindow(Stage primaryStage) {
         this.primaryStage = primaryStage;
     }
 

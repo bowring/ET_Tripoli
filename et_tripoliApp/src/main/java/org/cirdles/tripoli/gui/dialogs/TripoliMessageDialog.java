@@ -29,14 +29,14 @@ import java.util.regex.Pattern;
 /**
  * @author James Bowring
  */
-public class ET_TripoliMessageDialog extends Alert {
+public class TripoliMessageDialog extends Alert {
 
-    public ET_TripoliMessageDialog() {
+    public TripoliMessageDialog() {
         super(null);
     }
 
     //http://stackoverflow.com/questions/26341152/controlsfx-dialogs-deprecated-for-what/32618003#32618003
-    public ET_TripoliMessageDialog(AlertType alertType, String message, String headerText, Window owner) {
+    public TripoliMessageDialog(AlertType alertType, String message, String headerText, Window owner) {
         super(alertType);
         initOwner(owner);
         setTitle("Tripoli Alert");
@@ -56,7 +56,7 @@ public class ET_TripoliMessageDialog extends Alert {
      * @param owner
      */
     public static void showWarningDialog(String message, Window owner) {
-        Alert alert = new ET_TripoliMessageDialog(AlertType.WARNING, message, "Tripoli warns you:", owner);
+        Alert alert = new TripoliMessageDialog(AlertType.WARNING, message, "Tripoli warns you:", owner);
         alert.showAndWait();
     }
 
@@ -65,7 +65,7 @@ public class ET_TripoliMessageDialog extends Alert {
      * @param owner
      */
     public static void showInfoDialog(String message, Window owner) {
-        Alert alert = new ET_TripoliMessageDialog(
+        Alert alert = new TripoliMessageDialog(
                 AlertType.INFORMATION,
                 message,
                 "Tripoli informs you:", owner);
@@ -74,13 +74,13 @@ public class ET_TripoliMessageDialog extends Alert {
 
     public static void showSavedAsDialog(File file, Window owner) {
         if (file == null) {
-            Alert dialog = new ET_TripoliMessageDialog(AlertType.WARNING,
+            Alert dialog = new TripoliMessageDialog(AlertType.WARNING,
                     "Path is null!",
                     "Check permissions ...",
                     owner);
             dialog.showAndWait();
         } else {
-            Alert dialog = new ET_TripoliMessageDialog(AlertType.CONFIRMATION,
+            Alert dialog = new TripoliMessageDialog(AlertType.CONFIRMATION,
                     showLongfilePath(file.getAbsolutePath()),
                     (file.isDirectory() ? "Files saved in:" : "File saved as:"),
                     owner);
