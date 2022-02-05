@@ -36,14 +36,14 @@ public class Tripoli {
     public static  final  StringBuilder CONTRIBUTORS_CONTENT = new StringBuilder();
     public static  final  StringBuilder SUPPORTERS_CONTENT = new StringBuilder();
 
-    public static  final  ResourceExtractor ET_TRIPOLI_RESOURCE_EXTRACTOR
+    public static  final  ResourceExtractor TRIPOLI_RESOURCE_EXTRACTOR
             = new ResourceExtractor(Tripoli.class);
 
   static {
         String version = "version";
         String releaseDate = "date";
 
-        Path resourcePath = ET_TRIPOLI_RESOURCE_EXTRACTOR.extractResourceAsPath("version.txt");
+        Path resourcePath = TRIPOLI_RESOURCE_EXTRACTOR.extractResourceAsPath("version.txt");
 
         Charset charset = StandardCharsets.UTF_8;
         try (BufferedReader reader = Files.newBufferedReader(resourcePath, charset)) {
@@ -67,7 +67,7 @@ public class Tripoli {
         RELEASE_DATE = releaseDate;
 
         // get content for about window
-        resourcePath = Tripoli.ET_TRIPOLI_RESOURCE_EXTRACTOR.extractResourceAsPath("docs/aboutContent.txt");
+        resourcePath = Tripoli.TRIPOLI_RESOURCE_EXTRACTOR.extractResourceAsPath("docs/aboutContent.txt");
         try (BufferedReader reader = Files.newBufferedReader(resourcePath, charset)) {
             String thisLine;
 
@@ -79,7 +79,7 @@ public class Tripoli {
             System.err.format("IOException: %s%n", x);
         }
 
-        resourcePath = Tripoli.ET_TRIPOLI_RESOURCE_EXTRACTOR.extractResourceAsPath("docs/contributorsContent.txt");
+        resourcePath = Tripoli.TRIPOLI_RESOURCE_EXTRACTOR.extractResourceAsPath("docs/contributorsContent.txt");
         try (BufferedReader reader = Files.newBufferedReader(resourcePath, charset)) {
             String thisLine;
 
@@ -91,7 +91,7 @@ public class Tripoli {
             System.err.format("IOException: %s%n", x);
         }
 
-        resourcePath = Tripoli.ET_TRIPOLI_RESOURCE_EXTRACTOR.extractResourceAsPath("docs/supportersContent.txt");
+        resourcePath = Tripoli.TRIPOLI_RESOURCE_EXTRACTOR.extractResourceAsPath("docs/supportersContent.txt");
         try (BufferedReader reader = Files.newBufferedReader(resourcePath, charset)) {
             String thisLine;
 

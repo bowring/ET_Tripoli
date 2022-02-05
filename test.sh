@@ -15,6 +15,5 @@ unzip -qd gradle7 gradle7.zip
 ls gradle7/gradle-7.3.3
 echo ""
 
-echo "building ET_Tripoli        **************************"
+echo "building Tripoli        **************************"
 gradle7/gradle-7.3.3/bin/gradle clean build -Dorg.gradle.java.home=./jdk-17.0.1-full/
-

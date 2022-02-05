@@ -46,8 +46,8 @@ test {
 }
 
 project(":et_tripoliApp") {
-    description = "ET_Tripoli GUI"
-    archivesBaseName = "ET_Tripoli"
+    description = "Tripoli GUI"
+    archivesBaseName = "Tripoli"
 }
 
 task fatAppJar(type: Jar) {
