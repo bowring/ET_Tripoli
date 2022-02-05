@@ -24,7 +24,7 @@ import javafx.scene.control.Label;
 import org.cirdles.tripoli.Tripoli;
 import org.cirdles.tripoli.gui.utilities.BrowserControl;
 
-public class AboutET_TripoliController {
+public class AboutTripoliController {
 
     @FXML // ResourceBundle that was given to the FXMLLoader
     private ResourceBundle resources;

@@ -44,7 +44,7 @@ public final class ET_TripoliAboutWindow {
 
     public void loadAboutWindow() {
         try {
-            Parent aboutPage = FXMLLoader.load(getClass().getResource("AboutET_Tripoli.fxml"));
+            Parent aboutPage = FXMLLoader.load(getClass().getResource("AboutTripoli.fxml"));
             Scene aboutScene = new Scene(aboutPage, 550, 700);
             Stage aboutWindow = new Stage(StageStyle.UNDECORATED);
             // center on app window
